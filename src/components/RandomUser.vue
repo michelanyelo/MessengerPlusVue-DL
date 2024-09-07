@@ -43,6 +43,7 @@ export default {
 
 img {
     width: 100%;
+    border-radius: 5px;
 }
 
 textarea {
@@ -54,6 +55,7 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;
     padding: 10px;
     cursor: pointer;
     width: 100%;

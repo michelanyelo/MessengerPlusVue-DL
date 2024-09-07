@@ -1,8 +1,13 @@
 <template>
-    <div class="user-container" v-if="user1 && user2">
-        <RandomUser :user="user1" @mensaje-enviado="handleMensajeEnviado" />
-        <ChatWindow :conversation="conversation" :user1="getUserName(user1)" :user2="getUserName(user2)" />
-        <RandomUser :user="user2" @mensaje-enviado="handleMensajeEnviado" />
+    <div class="chat-container">
+        <div>
+            <h1>VueJS Chat</h1>
+        </div>
+        <div class="user-container" v-if="user1 && user2">
+            <RandomUser :user="user1" @mensaje-enviado="handleMensajeEnviado" />
+            <ChatWindow :conversation="conversation" :user1="getUserName(user1)" :user2="getUserName(user2)" />
+            <RandomUser :user="user2" @mensaje-enviado="handleMensajeEnviado" />
+        </div>
     </div>
 </template>
 
@@ -58,13 +63,27 @@ export default {
 </script>
 
 <style scoped>
-.user-container {
+.chat-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.user-container>* {
-    margin: 0 10px;
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
 }
 </style>

@@ -3,7 +3,8 @@
         <div class="user-container">
             <img :src="user.picture.large" :alt="`${user.firstname} ${user.lastname}`">
             <p>{{ user.name.first }} {{ user.name.last }}</p>
-            <textarea v-model="message" placeholder="Escribe tu mensaje" rows="10"></textarea>
+            <textarea v-model="message" placeholder="Escribe tu mensaje" rows="10"
+                @keydown.enter.prevent="enviarMensaje"></textarea>
             <button @click="enviarMensaje">Enviar</button>
         </div>
     </div>

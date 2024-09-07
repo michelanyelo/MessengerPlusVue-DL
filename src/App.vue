@@ -1,9 +1,9 @@
 <script setup>
-import RandomUser from './components/RandomUser.vue'
+import UserContainer from './components/UserContainer.vue'
 </script>
 
 <template>
-  <RandomUser />
+  <UserContainer />
 </template>
 
 <style scoped></style>

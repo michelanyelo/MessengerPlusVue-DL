@@ -2,7 +2,7 @@
     <div v-if="user">
         <div class="user-container">
             <img :src="user.picture.large" :alt="`${user.firstname} ${user.lastname}`">
-            <p>{{ user.firstname }} {{ user.lastname }}</p>
+            <p>{{ user.name.first }} {{ user.name.last }}</p>
             <textarea v-model="message" placeholder="Escribe tu mensaje" rows="10"></textarea>
             <button @click="enviarMensaje">Enviar</button>
         </div>
@@ -24,7 +24,7 @@ export default {
         enviarMensaje() {
             if (this.message.trim() !== '') {
                 // Emitir el mensaje al componente padre o manejarlo aquí
-                this.$emit('mensaje-enviado', { userId: this.user.id, mensaje: this.message });
+                this.$emit('mensaje-enviado', { userId: this.user.registered.date, mensaje: this.message });
                 // Limpiar el mensaje
                 this.message = '';
             } else {

@@ -1,7 +1,7 @@
 <template>
     <div class="chat-container">
         <div>
-            <h1>VueJS Chat</h1>
+            <h1>Plus MSN!</h1>
         </div>
         <div class="user-container" v-if="user1 && user2">
             <RandomUser :user="user1" @mensaje-enviado="handleMensajeEnviado" />

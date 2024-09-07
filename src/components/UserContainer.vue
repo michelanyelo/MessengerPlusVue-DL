@@ -1,7 +1,8 @@
 <template>
     <div class="chat-container">
         <div>
-            <h1>Plus MSN!</h1>
+            <img src="/msn-aqua-messenger-icon.png" alt="msn plus logo">
+            <h1>Messenger <span>Plus!</span></h1>
         </div>
         <div class="user-container" v-if="user1 && user2">
             <RandomUser :user="user1" @mensaje-enviado="handleMensajeEnviado" />
@@ -78,6 +79,11 @@ h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
+    font-weight: 600;
+}
+
+span {
+    color: #FF9A00;
 }
 
 .user-container {
